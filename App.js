@@ -12,10 +12,11 @@ import LoginNavigation from './screen/Loginfile/LoginNavigation';
 export default function App(){
   
 return (
-      // <LoginNavigation/>
-      <FitnessContext>
-         <StackNavigator/>
-        </FitnessContext>
+      
+     <LoginNavigation/>
+      // <FitnessContext>
+      //    <StackNavigator/>
+      //   </FitnessContext>
   );
 }
 

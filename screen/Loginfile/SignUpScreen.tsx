@@ -1,15 +1,33 @@
-import { View, Text, TouchableOpacity, Image, TextInput, ImageBackground  } from 'react-native'
+import { View, Text, TouchableOpacity, Image, TextInput, KeyboardAvoidingView,ActivityIndicator, ImageBackground  } from 'react-native'
 import React, {useState} from 'react'
-// import { themeColors } from './Theme'
 import { useNavigation } from '@react-navigation/native'
 import {ArrowLeftIcon} from 'react-native-heroicons/solid'
 import { SafeAreaView } from 'react-native-safe-area-context';
-
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { FIREBASE_AUTH } from '../../FirebaseConfig';
 
 export default function SignUpScreen() {
   const navigation = useNavigation();
+  const [name,setName ]= useState('')
   const [email, setEmail] = useState('')
-  const [Password,setPassword] = useState('')
+  const [password,setPassword] = useState('')
+  const [loading,setLoading] = useState(false)
+  const auth = FIREBASE_AUTH
+
+  const signUp = async () =>{
+    setLoading(true)
+    try{
+        const response = await createUserWithEmailAndPassword(auth,email,password)
+        console.log(response);
+      alert("Check your emails")
+    }catch (error:any){
+      console.log(error);
+      alert('sign in failed: '+error.message)
+    }finally{
+      setLoading(false);
+    }
+  }
+
   return (
 <ImageBackground
  source={require("../../data/images/welcome.jpg")}
@@ -51,6 +69,7 @@ export default function SignUpScreen() {
             paddingHorizontal: 8,    
             paddingTop: 8,}}
       >
+        <KeyboardAvoidingView>
         <View 
         style={{
             marginTop:8,
@@ -71,8 +90,9 @@ export default function SignUpScreen() {
                     marginBottom: 12,
                     color:"#4A5568"
                 }}
-                value="john snow"
-                placeholder='Enter Name'
+                autoCapitalize="none"
+                onChangeText={(text) => setName(text)}
+                placeholder=' Name'
             />
             <Text 
             style={{
@@ -90,7 +110,8 @@ export default function SignUpScreen() {
                     marginBottom: 12, 
                     color: '#4A5568',
                 }}
-                value="john@gmail.com"
+                autoCapitalize="none"
+                onChangeText={(text) => setEmail(text)}
                 placeholder='Enter Email'
             />
             <Text 
@@ -110,10 +131,16 @@ export default function SignUpScreen() {
                     color: '#4A5568',
                 }}
                 secureTextEntry
-                value="test12345"
+                autoCapitalize="none"
+                onChangeText={(text) => setPassword(text)}
                 placeholder='Enter Password'
             />
-            <TouchableOpacity
+            {loading ? (
+                <ActivityIndicator />
+            ):
+            (
+                <TouchableOpacity
+                onPress={signUp}
                 style={{
 
                     paddingVertical: 12, 
@@ -132,7 +159,11 @@ export default function SignUpScreen() {
                     Sign Up
                 </Text>
             </TouchableOpacity>
+            )}
+
+            
         </View>
+        </KeyboardAvoidingView>
         <Text 
         style={{
             fontSize: 20, 

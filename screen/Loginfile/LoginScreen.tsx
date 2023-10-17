@@ -1,13 +1,32 @@
-import { View, Text, TouchableOpacity, Image, TextInput, ImageBackground} from 'react-native'
+import { View, Text, TouchableOpacity, Image, KeyboardAvoidingView,TextInput, Button,ImageBackground, ActivityIndicator} from 'react-native'
 import React, { useState } from 'react'
-// import { themeColors } from './Theme'
 import { useNavigation } from '@react-navigation/native'
 import {ArrowLeftIcon} from 'react-native-heroicons/solid'
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { FIREBASE_AUTH } from '../../FirebaseConfig';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 export default function LoginScreen(){
-  const [Email,setEmail]=useState('')
+  const [email,setEmail]=useState('')
   const [password,setPassword] = useState('')
+  const [loading,setLoading] = useState(false)
+  const auth = FIREBASE_AUTH
+
+  const signIn = async () =>{
+    setLoading(true)
+    try{
+      const response = await signInWithEmailAndPassword(auth, email, password);
+      console.log(response);
+    }catch (error:any){
+      console.log(error);
+      alert("Sign in failed: "+ error.message)
+    }finally{
+      setLoading(false);
+    }
+  }
+  
+
+
   const navigation = useNavigation();
   return (
    <ImageBackground
@@ -58,6 +77,7 @@ export default function LoginScreen(){
         paddingTop: 32,
       }} 
          >
+          <KeyboardAvoidingView>
           <View
           style={{
             marginTop:8,
@@ -80,6 +100,7 @@ export default function LoginScreen(){
                 color: '#4A5568',           
               }}
               placeholder="email"
+              autoCapitalize='none'
                onChangeText={(text)=>setEmail(text)}
             />
             <Text 
@@ -113,8 +134,10 @@ export default function LoginScreen(){
               }}>Forgot Password?</Text>
             </TouchableOpacity>
 
-            
-            <TouchableOpacity 
+            {
+              loading ? <ActivityIndicator/>
+              :
+              <TouchableOpacity 
             onPress={()=> navigation.navigate('Home')}
               style={{
                 marginTop:20,
@@ -133,8 +156,13 @@ export default function LoginScreen(){
                         Login
                 </Text>
              </TouchableOpacity>
+              
+            }
+            
+            
             
           </View>
+          </KeyboardAvoidingView>
           <Text 
           style={{
             fontSize: 20,      
