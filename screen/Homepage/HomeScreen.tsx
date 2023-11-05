@@ -3,11 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { View, Image, Text, StyleSheet, TouchableOpacity ,ScrollView, TextInput, ImageBackground } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-// import { themeColors } from '../Loginfile/Theme';
-
-import FitnessMainPage from './FitnessMainPage';
-import DietMainPage from './DietMainPage';
-import Recovery from './Recovery';
 const Stack = createNativeStackNavigator();
 
 const HomeScreen = ({ navigation }) => {
@@ -26,11 +21,11 @@ const HomeScreen = ({ navigation }) => {
           <Text
           style={
             {
-            flexDirection:"row",
-            textTransform: "capitalize",
+            // flexDirection:"row",
+            // textTransform: "capitalize",
             color:"white",
-            marginLeft:10,
-            marginTop:8,
+            marginLeft:60,
+            marginTop:-30,
           }
         }
         selectionColor={'white'}
@@ -46,15 +41,17 @@ const HomeScreen = ({ navigation }) => {
             backgroundColor: '#696969',
             paddingVertical: 8,
             paddingHorizontal: 10,
+            marginTop:30,
             borderRadius: 8,
-            marginVertical: 24,
+            marginVertical: 8,
             flexDirection: "row",
             justifyContent: "space-between",
             alignItems: "center",
-            marginHorizontal:20,
+            marginHorizontal:8,
+            marginBottom:20,
           }}
         >
-          <Ionicons name='search-outline' size={24} color={"white"} />
+          <Ionicons name='search-outline' size={20} color={"white"} />
           <TextInput
             placeholder='Search Workouts..'
             placeholderTextColor={"white"}
@@ -65,7 +62,7 @@ const HomeScreen = ({ navigation }) => {
               marginLeft: 10,
             }}
           />
-          <Ionicons name='options-outline' style={{backgroundColor:"#D3D3D3",borderRadius:5,padding:8,}} size={24} color={"black"}/>
+          <Ionicons name='options-outline' style={{backgroundColor:"#D3D3D3",borderRadius:6,padding:3,}} size={20} color={"black"}/>
         </View>
 
         <View style={styles.modulesContainer}>
@@ -155,7 +152,7 @@ const styles = StyleSheet.create({
   container: {
     marginTop:30,
     flex: 1,
-    backgroundColor: "black",
+    backgroundColor: "#ADD8E6",
     padding: 10,
   },
   header: {
@@ -183,8 +180,8 @@ const styles = StyleSheet.create({
   //   resizeMode:"cover",
   // },
   module: {
-    width: "100%",
-    height:320,
+    width: "80%",
+    height:220,
     aspectRatio: 1,
     justifyContent: 'center',
     alignItems: 'center',

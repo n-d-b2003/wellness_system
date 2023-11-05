@@ -1,12 +1,14 @@
-import { View, Text, TouchableOpacity, Image, KeyboardAvoidingView,TextInput, Button,ImageBackground, ActivityIndicator} from 'react-native'
-import React, { useState } from 'react'
+import { View, Text, TouchableOpacity, Image, KeyboardAvoidingView,TextInput, Button,ImageBackground, ActivityIndicator, Alert} from 'react-native'
+import React, { useState, useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import {ArrowLeftIcon} from 'react-native-heroicons/solid'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FIREBASE_AUTH } from '../../FirebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
+
 export default function LoginScreen(){
+
   const [email,setEmail]=useState('')
   const [password,setPassword] = useState('')
   const [loading,setLoading] = useState(false)

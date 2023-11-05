@@ -21,10 +21,25 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.wellness.fitness",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "expo": {
+      "plugins": [
+        "react-native-health-connect"
+      ]
+    },
+    "plugins": [
+      "react-native-health"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "eaed48b6-4f3c-46bc-a635-15d866d971b5"
+      }
     }
   }
 }
