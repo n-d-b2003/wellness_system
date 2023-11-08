@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "906820808583",
+    "project_id": "wellness-app-5298c",
+    "storage_bucket": "wellness-app-5298c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906820808583:android:fe15017969ac95242d2d22",
+        "android_client_info": {
+          "package_name": "com.wellness.fitness"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrn9caldPgWdVMAjxtmy_sI8hHhBzrVpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

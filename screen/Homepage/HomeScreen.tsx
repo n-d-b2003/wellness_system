@@ -68,10 +68,10 @@ const HomeScreen = ({ navigation }) => {
         <View style={styles.modulesContainer}>
                 
         <TouchableOpacity
-          style={[styles.module,{ backgroundColor: '#F5F5F5' }]}
-          onPress={() => navigation.navigate('AI')}
+          style={[styles.module,{ backgroundColor: 'black' }]}
+          onPress={() => navigation.navigate('Moodbase')}
         > 
-        <ImageBackground
+        {/* <ImageBackground
               source={require('../../data/images/ai.jpg')}
               resizeMode="stretch"
               style={{
@@ -81,9 +81,14 @@ const HomeScreen = ({ navigation }) => {
                 height:"100%",
                 alignSelf:"center",
               }}
-            >      
-          <Text style={styles.moduleText}>AI</Text>
-          </ImageBackground> 
+            >       */}
+          <Text style={{
+              fontWeight:'600',
+              color: 'white',
+              alignSelf:"center",
+              fontSize:20,
+          }}>Mood Based</Text>
+          {/* </ImageBackground>  */}
         </TouchableOpacity>
 
         <TouchableOpacity
