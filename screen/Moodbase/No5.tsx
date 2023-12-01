@@ -7,8 +7,12 @@ const Stack = createNativeStackNavigator();
 const No5 = ({ navigation }) => {
   return (
     <View style={styles.container}>
+<<<<<<< HEAD
       <Text style={styles.question}>
 Would you like to take a revitalizing 30-minute power nap to re-energize and refresh?</Text>
+=======
+      <Text style={styles.question}>Can we have 30min sleep?</Text>
+>>>>>>> d5c444c30802d86662705e4fb1f6eeae8faa8ba8
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}

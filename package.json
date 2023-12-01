@@ -35,12 +35,18 @@
     "expo-status-bar": "~1.6.0",
     "firebase": "^10.4.0",
     "link": "^2.1.0",
+<<<<<<< HEAD
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
     "react-native": "^0.72.6",
     "react-native-calendars": "^1.1302.0",
+=======
+    "react": "^18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "^0.72.6",
+>>>>>>> d5c444c30802d86662705e4fb1f6eeae8faa8ba8
     "react-native-easy-rating": "^0.2.1",
     "react-native-google-fit": "^0.19.1",
     "react-native-health": "^1.18.0",
@@ -48,7 +54,10 @@
     "react-native-heroicons": "^3.2.0",
     "react-native-linear-gradient": "^2.8.3",
     "react-native-local-notifications": "^2.0.0",
+<<<<<<< HEAD
     "react-native-paper": "^5.11.2",
+=======
+>>>>>>> d5c444c30802d86662705e4fb1f6eeae8faa8ba8
     "react-native-push-notification": "^8.1.1",
     "react-native-reanimated": "~3.3.0",
     "react-native-safe-area-context": "4.6.3",

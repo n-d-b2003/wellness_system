@@ -17,9 +17,13 @@ const Moodbase = ({ navigation }) => {
  }}
     >
     <View style={styles.container}>
+<<<<<<< HEAD
       <Text style={styles.question}>Ready to elevate your day with a fantastic workout? Which one will you choose to get started?
 
 </Text>
+=======
+      <Text style={styles.question}>Start the workout?</Text>
+>>>>>>> d5c444c30802d86662705e4fb1f6eeae8faa8ba8
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}

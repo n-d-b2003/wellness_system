@@ -4,7 +4,11 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 const No1 = ({ navigation }) => {
   return (
     <View style={styles.container}>
+<<<<<<< HEAD
       <Text style={styles.question}>How would you like to invigorate your day: with a refreshing jog or a leisurely walk? The choice is yours!</Text>
+=======
+      <Text style={styles.question}>Can we go for jogging?</Text>
+>>>>>>> d5c444c30802d86662705e4fb1f6eeae8faa8ba8
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}
