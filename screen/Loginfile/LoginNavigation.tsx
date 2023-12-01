@@ -30,11 +30,9 @@ import No5 from '../Moodbase/No5';
 import Yes6 from '../Moodbase/Yes6';
 import No6 from '../Moodbase/No6';
 import Warmupworkout from '../Body workout/Warmupworkout';
-<<<<<<< HEAD
+
 import Form from '../Model/Form';
 
-=======
->>>>>>> d5c444c30802d86662705e4fb1f6eeae8faa8ba8
 const Stack = createNativeStackNavigator();
 
 const LoginNavigation = () => {
@@ -56,10 +54,9 @@ const LoginNavigation = () => {
         <Stack.Screen name="FitnessMains" options={{headerShown: false}} component={FitnessMainPage} />
         <Stack.Screen name="Diet" options={{headerShown: false}} component={DietMainPage} />
         <Stack.Screen name="Recovery" options={{headerShown: false}} component={Recovery} /> 
-<<<<<<< HEAD
+
         <Stack.Screen name='Form' options={{headerShown:false}} component={Form} />
-=======
->>>>>>> d5c444c30802d86662705e4fb1f6eeae8faa8ba8
+
         {/* moodbase */}
         <Stack.Screen name='Moodbase' options={{headerShown:false}} component={Moodbase}/>
         <Stack.Screen name='Yes1' options={{headerShown:false}} component={Yes1}/>

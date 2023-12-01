@@ -7,11 +7,9 @@ const Stack = createNativeStackNavigator();
 const No3 = ({ navigation }) => {
   return (
     <View style={styles.container}>
-<<<<<<< HEAD
+
       <Text style={styles.question}>Time to unleash your inner strength with some powerful push-ups, pull-ups, and squats - your body will thank you for it!</Text>
-=======
-      <Text style={styles.question}>Can we do Push Pull Squat?</Text>
->>>>>>> d5c444c30802d86662705e4fb1f6eeae8faa8ba8
+
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}

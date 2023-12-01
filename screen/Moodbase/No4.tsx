@@ -7,11 +7,9 @@ const Stack = createNativeStackNavigator();
 const No4 = ({ navigation }) => {
   return (
     <View style={styles.container}>
-<<<<<<< HEAD
+
       <Text style={styles.question}>Shall we tune in to some music?</Text>
-=======
-      <Text style={styles.question}>let's listen to music?</Text>
->>>>>>> d5c444c30802d86662705e4fb1f6eeae8faa8ba8
+
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}

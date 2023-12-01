@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, ImageBackground } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // Assuming you are using Expo for vector icons
-
+import { Ionicons } from '@expo/vector-icons'; 
 import { useNavigation } from '@react-navigation/native';
 
 const DietMainPage = () => {

@@ -7,11 +7,9 @@ const Stack = createNativeStackNavigator();
 const No2 = ({ navigation }) => {
   return (
     <View style={styles.container}>
-<<<<<<< HEAD
+
       <Text style={styles.question}>Are you excited to prioritize your health today? When it comes to walking, where will you be strolling to enjoy your workout?</Text>
-=======
-      <Text style={styles.question}>Can we go for Walking?</Text>
->>>>>>> d5c444c30802d86662705e4fb1f6eeae8faa8ba8
+
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}

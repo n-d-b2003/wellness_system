@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, ImageBackground } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Assuming you are using Expo for vector icons
 import { useNavigation } from '@react-navigation/native';
-// import { FitnessContext } from '../weigthsection/Weigthcontext';
 import { FitnessContext } from '../weigthsection/Weigthcontext';
 const FitnessMainPage = () => {
   const navigation = useNavigation()
@@ -35,17 +34,6 @@ const FitnessMainPage = () => {
           <Text style={styles.moduleText}>Walking</Text>
         </ImageBackground>
         </TouchableOpacity>
-
-        {/* <TouchableOpacity style={styles.module}>
-        <ImageBackground
-              resizeMode='cover'
-              source={require('../../data/images/running_image.jpg')}
-              style={styles.moduleImage}
-            >
-          <Text style={styles.moduleText}>Jogging</Text>
-        </ImageBackground>
-        </TouchableOpacity> */}
-
         <TouchableOpacity style={styles.module}>
         <ImageBackground
               resizeMode='cover'
