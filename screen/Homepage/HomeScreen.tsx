@@ -68,10 +68,10 @@ const HomeScreen = ({ navigation }) => {
         <View style={styles.modulesContainer}>
                 
         <TouchableOpacity
-          style={[styles.module,{ backgroundColor: '#F5F5F5' }]}
-          onPress={() => navigation.navigate('AI')}
+          style={[styles.module,{ backgroundColor: 'black' }]}
+          onPress={() => navigation.navigate('Moodbase')}
         > 
-        <ImageBackground
+        {/* <ImageBackground
               source={require('../../data/images/ai.jpg')}
               resizeMode="stretch"
               style={{
@@ -81,9 +81,14 @@ const HomeScreen = ({ navigation }) => {
                 height:"100%",
                 alignSelf:"center",
               }}
-            >      
-          <Text style={styles.moduleText}>AI</Text>
-          </ImageBackground> 
+            >       */}
+          <Text style={{
+              fontWeight:'600',
+              color: 'white',
+              alignSelf:"center",
+              fontSize:20,
+          }}>Mood Based</Text>
+          {/* </ImageBackground>  */}
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -143,6 +148,25 @@ const HomeScreen = ({ navigation }) => {
           </ImageBackground>
         </TouchableOpacity>
 
+        <TouchableOpacity
+          style={[styles.module, { backgroundColor: '#F5F5F5' }]}
+          onPress={() => navigation.navigate('Form')}
+        >
+          <ImageBackground
+              resizeMode="stretch"
+              source={require('../../data/images/recovery_background.jpg')}
+              style={{
+                flex: 1,
+                justifyContent: 'space-between',
+                width:"100%",
+                height:"100%",
+                alignContent: 'center',
+              }}
+            >
+          <Text style={styles.moduleText}>FORM</Text>
+          </ImageBackground>
+        </TouchableOpacity>
+
       </View>
     </ScrollView>
   );
@@ -152,7 +176,7 @@ const styles = StyleSheet.create({
   container: {
     marginTop:30,
     flex: 1,
-    backgroundColor: "#ADD8E6",
+    backgroundColor: "#1a1a1a",
     padding: 10,
   },
   header: {
@@ -170,15 +194,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignContent:'center',
     marginBottom:12,
+    elevation: 2,
   },
-  // moduleImage: {
-  //   flex: 1,
-  //   justifyContent: 'space-between',
-  //   alignContent: 'center',
-  //   flexDirection:'row',
-  //   marginBottom:12,
-  //   resizeMode:"cover",
-  // },
   module: {
     width: "80%",
     height:220,

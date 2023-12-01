@@ -3,19 +3,18 @@ import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import { FitnessContext } from './screen/weigthsection/Weigthcontext';
 import React,{ useEffect, useState } from 'react';
 import LoginNavigation from './screen/Loginfile/LoginNavigation';
-import { usePushNotifications } from './userPushNotification';
 import JoggingHome from './screen/jogging/JoggingHome';
-
-
+import { initializeAuth, getReactNativePersistence } from 'firebase/auth';      
+import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
+import Index from './screen';
 export default function App(){
-  const { expoPushToken } = usePushNotifications()
-  console.log(expoPushToken)
-
 return (
-    //  <FitnessContext>
-    //      <LoginNavigation/>
-    //  </FitnessContext>
-      <JoggingHome/>
+  // <Index/>
+  // <Normal/>
+   <FitnessContext>
+         <LoginNavigation/>
+     </FitnessContext>
+      // <JoggingHome/>
   );
 }
 

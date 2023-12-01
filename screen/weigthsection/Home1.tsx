@@ -12,7 +12,7 @@ const Home1 = () => {
        <ScrollView showsVerticalScrollIndicator={false} style={{marginTop:50,flex:1}}>
            <View 
           style={{
-            backgroundColor:"black",   //home screen background color orange
+            backgroundColor:"#1a1a1a",   //home screen background color orange
             padding:10,
             // height:200,
             width:"100%",

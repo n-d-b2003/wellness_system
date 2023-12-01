@@ -14,7 +14,9 @@ const FitnessMainPage = () => {
       <View style={styles.modulesContainer}>
         
 
-      <TouchableOpacity style={styles.module}>
+      <TouchableOpacity style={styles.module}
+      onPress={ ()=>navigation.navigate('WarmupHome')}
+      >
         <ImageBackground
               resizeMode='stretch'
               source={require('../../data/images/warmup_image.jpg')}
@@ -34,7 +36,7 @@ const FitnessMainPage = () => {
         </ImageBackground>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.module}>
+        {/* <TouchableOpacity style={styles.module}>
         <ImageBackground
               resizeMode='cover'
               source={require('../../data/images/running_image.jpg')}
@@ -42,7 +44,7 @@ const FitnessMainPage = () => {
             >
           <Text style={styles.moduleText}>Jogging</Text>
         </ImageBackground>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
         <TouchableOpacity style={styles.module}>
         <ImageBackground
@@ -91,7 +93,7 @@ const FitnessMainPage = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "black",  
+    backgroundColor: "#1a1a1a",  
     padding: 10,
     marginTop:20,
     flexDirection: "column",
@@ -109,6 +111,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: 'wrap',
     alignContent:'center',
+    marginTop:15,
     marginBottom:12,
   },
   moduleImage: {
